@@ -32,3 +32,8 @@ handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 #Limpia la consola dejandola completamente vacia
 def limpiar():
     os.system('cls')
+
+#Devolver el tamaño de la Terminal
+def tamaño():
+    z = os.get_terminal_size()
+    return (z.columns, z.lines)
