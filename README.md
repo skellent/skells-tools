@@ -14,3 +14,6 @@ Este modulo de python busca convertirse en una libreria que permita manejar de m
 
 - ir() :
     - Permite cambiar el lugar del Cursor
+
+- ejecutar() :
+    - Permite ejecutar un comando de la terminal por parte del desarrollador

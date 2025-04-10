@@ -46,3 +46,11 @@ def tamaño():
 # Funcion que permite cambiar la posicion del cursor de la terminal
 def ir(x, y):
     kernel32.SetConsoleCursorPosition(handle, ctypes.wintypes._COORD(x, y))
+
+# Funcion que permite ejecutar un comando del Sistema especificado por el desarrollador/usuario
+def ejecutar(comando, mostrar=True):
+    with os.popen(comando) as proceso:
+        salida = proceso.read()
+    if mostrar:
+        print(salida)
+    return(salida)
