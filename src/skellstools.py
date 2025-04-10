@@ -54,3 +54,18 @@ def ejecutar(comando, mostrar=True):
     if mostrar:
         print(salida)
     return(salida)
+
+# Centrara el texto que se imprima
+def alinear(txt="Ejemplo de Centrado", alineacion='izq'): # 'izq', 'cen', 'der'
+    if alineacion == 'cen':
+        for i in range((tamaño()[0] // 2) - (len(txt) // 2)):
+            txt = " " + txt
+            i += 1
+        for i in range((tamaño()[0] // 2) - (len(txt) // 2)):
+            txt += " "
+            i += 1
+    elif alineacion == 'der':
+        for i in range(tamaño()[0] - len(txt)):
+            txt = " " + txt
+            i += 1
+    return(txt)

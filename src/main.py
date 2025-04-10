@@ -1,4 +1,4 @@
-from skellstools import limpiar, tamaño, ir, esperar, ejecutar
+from skellstools import limpiar, tamaño, ir, esperar, ejecutar, alinear
 
 def cuenta_regresiva(funcion):
     print("3 Segundos")
@@ -26,3 +26,11 @@ print("Ejecutaremos un comando (dir) del sistema con 'ejecutar'")
 ejecutar('dir')
 print("Ahora repetiremos lo mismo, pero con (tree)")
 ejecutar('tree')
+print("Como puede observar, literalmente ejecutamos comandos de la terminal")
+print("Ahora limpiamos")
+cuenta_regresiva('limpiar')
+limpiar()
+print("Ahora intentaremos centrar texto en 3 formas distintas: \n")
+print(alinear("Hola Skellent"))
+print(alinear("Hola Skellent", 'der'))
+print(alinear("Hola Skellent", 'cen'))

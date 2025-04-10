@@ -2,6 +2,8 @@
 
 Este modulo de python busca convertirse en una libreria que permita manejar de manera estetica aplicaciones de consola/terminal desarrolladas en python con librerias integradas
 
+> Este README sera editado posteriormente para mejorar la documentacion
+
 ## Funciones existentes:
 - Limpiar() :
     - Permite limpiar la pantalla de la terminal dejandola completamente vacia, es el equivalente a ejecutar 'cls' en la terminal
@@ -17,3 +19,6 @@ Este modulo de python busca convertirse en una libreria que permita manejar de m
 
 - ejecutar() :
     - Permite ejecutar un comando de la terminal por parte del desarrollador
+
+- Alinear() :
+    - Permite alinear el texto en formatos Izquierda, Centrado y Derecha
