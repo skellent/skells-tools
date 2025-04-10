@@ -61,7 +61,7 @@ def alinear(txt="Ejemplo de Centrado", alineacion='izq'): # 'izq', 'cen', 'der'
         for i in range((tamaño()[0] // 2) - (len(txt) // 2)):
             txt = " " + txt
             i += 1
-        for i in range((tamaño()[0] // 2) - (len(txt) // 2)):
+        for i in range(tamaño()[0] - len(txt)):
             txt += " "
             i += 1
     elif alineacion == 'der':
@@ -69,3 +69,8 @@ def alinear(txt="Ejemplo de Centrado", alineacion='izq'): # 'izq', 'cen', 'der'
             txt = " " + txt
             i += 1
     return(txt)
+
+# Cambia el color del texto y del fondo
+def color(fontColor = Color.BLANCO, bgColor = Color.NEGRO):
+    atributo = fontColor.value | (bgColor.value << 4)
+    kernel32.SetConsoleTextAttribute(handle, atributo)

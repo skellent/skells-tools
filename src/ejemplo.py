@@ -1,4 +1,4 @@
-from skellstools import limpiar, tamaño, ir, esperar, ejecutar, alinear
+from skellstools import limpiar, tamaño, ir, esperar, ejecutar, alinear, color, Color
 
 def cuenta_regresiva(funcion):
     print("3 Segundos")
@@ -30,7 +30,12 @@ print("Como puede observar, literalmente ejecutamos comandos de la terminal")
 print("Ahora limpiamos")
 cuenta_regresiva('limpiar')
 limpiar()
-print("Ahora intentaremos centrar texto en 3 formas distintas: \n")
+print("Ahora intentaremos centrar texto en 3 formas distintas y cambiaremos su color: \n")
+color(Color.CYAN)
 print(alinear("Hola Skellent"))
+color(Color.AMARILLO)
 print(alinear("Hola Skellent", 'der'))
+color(Color.BLANCO, Color.AZUL)
 print(alinear("Hola Skellent", 'cen'))
+color()
+print("Y asi hemos terminado de probar las primeras funciones de Skell's Tools")
