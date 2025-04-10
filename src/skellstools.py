@@ -1,4 +1,5 @@
 # Librerías integradas necesarias
+import ctypes.wintypes
 import os
 import sys
 import ctypes
@@ -29,11 +30,19 @@ handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 
 #Funciones para el manejo de la consola
 
-#Limpia la consola dejandola completamente vacia
+# Funcion para esperar 1 segundo o mas
+def esperar(segundo):
+    sleep(segundo)
+
+# Limpia la consola dejandola completamente vacia
 def limpiar():
     os.system('cls')
 
-#Devolver el tamaño de la Terminal
+# Devolver el tamaño de la Terminal
 def tamaño():
     z = os.get_terminal_size()
     return (z.columns, z.lines)
+
+# Funcion que permite cambiar la posicion del cursor de la terminal
+def ir(x, y):
+    kernel32.SetConsoleCursorPosition(handle, ctypes.wintypes._COORD(x, y))

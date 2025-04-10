@@ -1,4 +1,4 @@
-from skellstools import limpiar, tamaño
+from skellstools import limpiar, tamaño, ir, esperar
 
 print("Este texto desaparecera y no sera visualizado")
 limpiar()
@@ -6,3 +6,14 @@ print("Este texto si sera visible y seguido del process finished aparecera la ba
 print("Ahora observa el tamano de tu terminal abierta: ")
 print(f"Alto: {tamaño()[0]}")
 print(f"Ancho: {tamaño()[1]}")
+print("Ahora modificaremos el texto de la primera linea dentro de 3 segundos")
+print("3 Segundos")
+esperar(1)
+print("2 Segundos")
+esperar(1)
+print("1 Segundos")
+esperar(1)
+print("Ejecutando funcion 'ir()'")
+ir(0, 0)
+print("Como podras observar, este texto se ha sobreescrito en el anterior //")
+print("al mover el cursor, tambien cambiara la posicion en el cual aparece la linea de comandos //")

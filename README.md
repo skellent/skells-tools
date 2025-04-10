@@ -8,3 +8,9 @@ Este modulo de python busca convertirse en una libreria que permita manejar de m
 
 - tamaño() :
     - Devuelve el "tamaño" (número de caracteres disponibles en ancho y alto) en una tupla
+
+- esperar() :
+    - Recicla el "sleep" de la libreria "time" solo que incorporandolo dentro de skell's tools para no tener que importarla por separado
+
+- ir() :
+    - Permite cambiar el lugar del Cursor
